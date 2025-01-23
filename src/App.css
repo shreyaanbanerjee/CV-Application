@@ -1,0 +1,647 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tektur&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bagel+Fat+One&display=swap');
+
+
+:root{
+    --accent:rgb(0, 242, 205);
+}
+
+*,
+*::after,
+*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: rgb(255, 255, 255);
+}
+
+.App{
+    width: 100%;
+    padding: 2rem;
+    display: flex;
+    gap: 2rem;
+}
+
+.fields{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 100%;
+}
+.resume{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+/* Header Box Section */
+
+.HeaderBox{
+    background: #1c1c1c;
+    color: white;
+    padding: 1.5rem 2rem;
+    border-radius: 20px;
+    font-family: 'Lobster', cursive;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.topSection{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.iconSection{
+    display: flex;
+    gap: 2rem;
+}
+
+.icon{
+    color: var(--accent);
+    cursor: pointer;
+    transition: 200ms;
+}
+
+.icon:active{
+    transform: scale(0.8);
+}
+
+.bottomSection{
+    margin: 0 auto;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+.link{
+    outline: none;
+    text-decoration: none;
+    color: white;
+    padding: 0.5rem 1rem;
+    background: #242424;
+    border-radius: 12px;
+    transition: 300ms ease-in-out;
+    font-family: 'Lobster', cursive;
+}
+
+.link > span{
+    margin-left: 0.5rem;
+    transition: 300ms ease-in-out;
+}
+
+.link:hover {
+    background: #2e2e2e;
+}
+
+.link:hover span{
+    color: var(--accent);
+}
+
+.link:active{
+    transform: scale(0.9);
+}
+
+@media(max-width:1340px){
+    .HeaderBox{
+        width: 100%;
+        margin: 0 auto;
+    }
+}
+
+
+
+/* Gradient Section */
+
+.Gradient{
+    background: #1c1c1c;
+    color: white;
+    padding: 2rem;
+    border-radius: 20px;
+    font-family: 'Kumbh Sans', sans-serif;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.colorBox{
+    display: flex;
+    justify-content: space-evenly;
+    gap: 1rem;
+}
+
+.color{
+  visibility: hidden;
+}
+
+#colorPicker1{
+    padding: 1rem;
+    border-radius: 40px;
+    cursor: pointer;
+    width: 100%;
+    transition: 300ms ease-in-out;
+}
+
+#colorPicker2{
+    padding: 1rem;
+    border-radius: 40px;
+    cursor: pointer;
+    width: 100%;
+    transition: 300ms ease-in-out;
+}
+
+#colorPicker1:hover,#colorPicker2:hover{
+    transform: scale(1.04);
+}
+
+/* Personal Data Form Section */
+
+.PersonalDataForm{
+    background: #1c1c1c;
+    color: white;
+    padding: 2rem;
+    border-radius: 20px;
+    font-family: 'Kumbh Sans', sans-serif;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.heading{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-family: 'Pacifico', cursive;
+}
+
+.iconNotClickable{
+    color: var(--accent);
+}
+
+.fullname{
+    display: flex;
+    gap: 1rem;
+}
+
+.fullname > input{
+    color: white;
+    width: 100%;
+    padding: 1rem;
+    background: #292929;
+    outline: none;
+    border: none;
+    border-radius: 14px;
+    font-size: 100%;
+    transition: 300ms ease-in-out;
+}
+
+input{
+    color: white;
+    padding: 1rem;
+    background: #292929;
+    outline: none;
+    border: none;
+    border-radius: 14px;
+    font-size: 100%;
+    transition: 300ms ease-in-out;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+input:hover,input:focus{
+    background:  #2b4a49;
+}
+
+#file{
+    display: none;
+}
+
+#filepicture{
+    color: var(--accent);
+    padding: 1rem;
+    background: #292929;
+    border-radius: 14px;
+    font-size: 100%;
+    cursor: pointer;
+    width: 100%;
+    transition: 300ms ease-in-out;
+    word-break: break-word;
+}
+
+#filepicture:hover,#filepicture:focus{
+    background: #2b4a49;
+}
+
+textarea{
+    width: 100%;
+    color: white;
+    padding: 1rem;
+    background: #292929;
+    outline: none;
+    border: none;
+    border-radius: 14px;
+    font-size: 100%;
+    font-family: inherit;
+    resize: none;
+    transition: 300ms ease-in-out;
+}
+
+textarea:focus ,textarea:hover{
+    background: #2b4a49;
+}
+
+@media(max-width:1340px){
+    .PersonalDataForm{
+        width: 100%;
+        margin: 0 auto;
+    }
+}
+
+/* Experience Form Section */
+
+.ExperienceForm{
+    background: #1c1c1c;
+    color: white;
+    padding: 2rem;
+    border-radius: 20px;
+    font-family: 'Kumbh Sans', sans-serif;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.subHeading{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+    font-family: 'Tektur', cursive;
+}
+
+.experienceRow{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+@media(max-width:1340px){
+    .ExperienceForm{
+        width: 100%;
+        margin: 0 auto;
+    }
+}
+
+
+
+/* Education Form Section */
+
+.EducationForm{
+    background: #1c1c1c;
+    color: white;
+    padding: 2rem;
+    border-radius: 20px;
+    font-family: 'Kumbh Sans', sans-serif;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+@media(max-width:1340px){
+    .EducationForm{
+        width: 100%;
+        margin: 0 auto;
+    }
+}
+
+
+
+/* Skills Form Section */
+
+.SkillsSection{
+    background: #1c1c1c;
+    color: white;
+    padding: 2rem;
+    border-radius: 20px;
+    font-family: 'Kumbh Sans', sans-serif;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.skillRow{
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.skillRow > input{
+    color: white;
+    width: 100%;
+    padding: 1rem;
+    background: #292929;
+    outline: none;
+    border: none;
+    border-radius: 14px;
+    font-size: 100%;
+    transition: 300ms ease-in-out;
+}
+
+.Btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    outline: none;
+    border: none;
+    background: #292929;
+    color: var(--accent);
+    border-radius: 14px;
+    padding: 0.5rem;
+    width: 15%;
+    transition: 300ms ease-in-out;
+    cursor: pointer;
+}
+
+.Btn:hover{
+    background: #01f351;
+}
+
+.AddSymbol{
+    transition: 300ms ease-in-out;
+}
+
+.Btn:hover .AddSymbol{
+    color: black;
+}
+
+.Btn:active{
+    transform: scale(0.8);
+}
+
+@media(max-width:1340px){
+    .SkillsSection{
+        width: 100%;
+        margin: 0 auto;
+    }
+}
+
+
+/* Contact Form Section */
+
+.ContactForm{
+    background: #1c1c1c;
+    color: white;
+    padding: 2rem;
+    border-radius: 20px;
+    font-family: 'Kumbh Sans', sans-serif;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.contactMe{
+    display: flex;
+    gap: 1rem;
+}
+
+.contactMe > input{
+    color: white;
+    width: 100%;
+    padding: 1rem;
+    background: #292929;
+    outline: none;
+    border: none;
+    border-radius: 14px;
+    font-size: 100%;
+    transition: 300ms ease-in-out;
+}
+
+input:hover,input:focus{
+    background:  #2b4a49;
+}
+
+@media(max-width:1340px){
+    .ContactForm{
+        width: 100%;
+        margin: 0 auto;
+    }
+}
+
+/* Resume Preview */
+.ResumePreview {
+    height: 29.7cm;
+    width: 21cm;
+    position: sticky;
+    top: 2rem;
+    padding: 2rem;
+    background: linear-gradient(to right, #e0e0e0, #ffffff); /* light background as a fallback */
+    font-size: 14px;
+}
+
+.ResumeTop {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    border-bottom: 2px solid #ccc;
+}
+
+.Header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.HeadTag {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.HeadTag > h1 {
+    font-size: 24px;
+    color: #333;
+}
+
+.ResumeTop > p {
+    font-style: italic;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.ResumeMiddle {
+    border-bottom: 2px solid #ccc;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.ResumeMiddle > h1 {
+    margin-top: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+.experiences {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.experienceContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.experienceContainer > h3 {
+    color: #000;
+}
+
+.workDescription {
+    color: #555;
+}
+
+.educationSkills {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.head {
+    font-size: 24px;
+    color: #333;
+}
+
+.educationContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.educationContainer > h3 {
+    color: #555;
+}
+
+.educationContainer > p {
+    color: #555;
+}
+
+.skillsContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.skillGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+    gap: 8px;
+}
+
+.list {
+    background-color: #333;
+    color: white;
+    padding: 0.4rem;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.BottomSection {
+    margin-top: 20px;
+    display: flex;
+    gap: 20px;
+}
+
+.ColumnContainer {
+    display: flex; /* Set flexbox layout */
+    flex-direction: row; /* Align items in a horizontal row */
+    justify-content: space-between; /* Add space between each child */
+    align-items: center; /* Center items vertically */
+    gap: 20px; /* Add spacing between child items */
+    width: 100%; /* Ensure the container spans full width */
+}
+
+.sec {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+}
+
+.sec > p {
+    word-break: break-word;
+    color: #555;
+}
+
+.logos {
+    background: #333;
+    color: white;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+@media (max-width: 1340px) {
+    .ResumePreview {
+        position: static;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 870px) {
+    .ResumePreview {
+        transform: scale(0.9);
+        margin: -40px 0px;
+    }
+}
+
+@media (max-width: 790px) {
+    .ResumePreview {
+        transform: scale(0.8);
+        margin: -100px 0px;
+    }
+}
+
+@media (max-width: 710px) {
+    .ResumePreview {
+        transform: scale(0.7);
+        margin: -160px 0px;
+    }
+}
+
+@media (max-width: 630px) {
+    .ResumePreview {
+        transform: scale(0.6);
+        margin: -220px 0px;
+    }
+}
+
+@media (max-width: 548px) {
+    .ResumePreview {
+        transform: scale(0.5);
+        margin: -280px 0px;
+    }
+}
+
+@media (max-width: 460px) {
+    .ResumePreview {
+        transform: scale(0.4);
+        margin: -340px 0px;
+    }
+}
+
+@media (max-width: 370px) {
+    .ResumePreview {
+        transform: scale(0.35);
+        margin: -370px 0px;
+    }
+}
